@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+	<title>Asocial</title>
+
+	<link rel="stylesheet" href="themes/asocial.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile.js"></script>
+	<script type="text/javascript" src="js/jquery.url.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+
+<div id="search" data-role="page" data-theme="a">
+<div data-role="header" data-theme="c" data-position="fixed">
+<h1>Asocial</h1>
+</div>
+<div data-role="content">
+<div data-role="collapsible-set">
+<ul id="search-list" data-role="listview" class="ui-corner-all ui-shadow" data-inset="true" data-filter="true" data-filter-placeholder="Cerca ...">
+</ul>
+</div>
+<div id="search-info" class="home">
+<a href="about.html"><img src="img/logo.png" alt="Asocial" /></a>
+&nbsp;
+<p class="home_bt"><input id="load_register" type="button" data-icon="edit" value="Registrati" />
+<input id="load_profile" type="button" data-icon="edit" value="Modifica profilo" /></p>  
+</div>
+&nbsp;
+<div id="search-error" class="intro"><h2>Nessun risultato</h2>
+<p>Prova a cambiare le parole chiave della tua ricerca</p>  
+</div>
+</div>
+</div>
+
+	</div>
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		app.initialize();
+	</script>
+</body>
+</html>

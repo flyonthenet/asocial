@@ -1,0 +1,104 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+	<title>Asocial</title>
+
+	<link rel="stylesheet" href="themes/asocial.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+	<!--link rel="stylesheet" type="text/css" href="css/apolitik.css" /-->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile.js"></script>
+	<script type="text/javascript" src="js/jquery.url.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+
+<body>
+<div id="profile" data-role="page" data-theme="a">
+<div data-role="header" data-theme="c" data-position="fixed">
+<a href="index.html" data-rel="back" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-inline="true">Back</a>
+<h1 id="page_title">Profilo personale</h1>
+<a class="ui-btn-right" href="index.html" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+</div>
+
+<div data-role="content">
+<p><label for="people_email">E-mail:</label>
+<input type="text" name="people_email" id="people_email" value="" autocomplete="off">
+<span id="people_email_error" class="alert"></span></p>
+
+<p><label for="people_firstname">Nome:</label>
+<input type="text" name="people_firstname" id="people_firstname" value="" autocomplete="off" />
+<span id="people_firstname_error" class="alert"></span></p>
+
+<p><label for="people_lastname">Cognome:</label>
+<input type="text" name="people_lastname" id="people_lastname" value="" autocomplete="off" />
+<span id="people_lastname_error" class="alert"></span></p>
+&nbsp;
+<p><input id="profile_thumbnail" type="button" data-icon="user" data-inline="true" value="Cambia foto" /></p>
+&nbsp;
+<p><label for="post_excerpt">Why A-social?</label>
+<textarea id="post_excerpt" name="post_excerpt"></textarea>
+<span id="post_excerpt_error" class="alert"></span></p>
+&nbsp;
+<p><label for="post_content">Your life:</label>
+<textarea id="post_content" name="post_content"></textarea>
+<span id="post_content_error" class="alert"></span></p>
+&nbsp;
+<p><label for="people_sex">Sesso:</label>
+<select id="people_sex" name="people_sex"><option value=""></option><option value="M">Maschile</option><option value="F">Femminile</option></select>
+<span id="people_sex_error" class="alert"></span></p>
+
+<p><label for="people_birthdate">Data di nascita:</label>
+<input type="date" name="people_birthdate" id="people_birthdate" value="" autocomplete="off" />
+<span id="people_birthdate" class="alert"></span></p>
+
+<p><label for="people_location_prov">Provincia:</label>
+<select id="people_location_prov" name="people_location_prov"><option value=""></option><option value="Agrigento">Agrigento</option><option value="Alessandria">Alessandria</option><option value="Ancona">Ancona</option><option value="Aquila">Aquila</option><option value="Arezzo">Arezzo</option><option value="Ascoli Piceno">Ascoli Piceno</option><option value="Asti">Asti</option><option value="Avellino">Avellino</option><option value="Bari">Bari</option><option value="Barletta Andria Trani">Barletta Andria Trani</option><option value="Belluno">Belluno</option><option value="Benevento">Benevento</option><option value="Bergamo">Bergamo</option><option value="Biella">Biella</option><option value="Bologna">Bologna</option><option value="Bolzano">Bolzano</option><option value="Brescia">Brescia</option><option value="Brindisi">Brindisi</option><option value="Cagliari">Cagliari</option><option value="Caltanissetta">Caltanissetta</option><option value="Campobasso">Campobasso</option><option value="Carbonia-Iglesias">Carbonia-Iglesias</option><option value="Caserta">Caserta</option><option value="Catania">Catania</option><option value="Catanzaro">Catanzaro</option><option value="Chieti">Chieti</option><option value="Como">Como</option><option value="Cosenza">Cosenza</option><option value="Cremona">Cremona</option><option value="Crotone">Crotone</option><option value="Cuneo">Cuneo</option><option value="Enna">Enna</option><option value="Fermo">Fermo</option><option value="Ferrara">Ferrara</option><option value="Firenze">Firenze</option><option value="Foggia">Foggia</option><option value="Forl?-Cesena">Forl?-Cesena</option><option value="Frosinone">Frosinone</option><option value="Genova">Genova</option><option value="Gorizia">Gorizia</option><option value="Grosseto">Grosseto</option><option value="Imperia">Imperia</option><option value="Isernia">Isernia</option><option value="Latina">Latina</option><option value="Lecce">Lecce</option><option value="Lecco">Lecco</option><option value="Livorno">Livorno</option><option value="Lodi">Lodi</option><option value="Lucca">Lucca</option><option value="Macerata">Macerata</option><option value="Mantova">Mantova</option><option value="Massa-Carrara">Massa-Carrara</option><option value="Matera">Matera</option><option value="Medio Campidano">Medio Campidano</option><option value="Messina">Messina</option><option value="Milano">Milano</option><option value="Modena">Modena</option><option value="Monza e della Brianza">Monza e della Brianza</option><option value="Napoli">Napoli</option><option value="Novara">Novara</option><option value="Nuoro">Nuoro</option><option value="Ogliastra">Ogliastra</option><option value="Olbia-Tempio">Olbia-Tempio</option><option value="Oristano">Oristano</option><option value="Padova">Padova</option><option value="Palermo">Palermo</option><option value="Parma">Parma</option><option value="Pavia">Pavia</option><option value="Perugia">Perugia</option><option value="Pesaro e Urbino">Pesaro e Urbino</option><option value="Pescara">Pescara</option><option value="Piacenza">Piacenza</option><option value="Pisa">Pisa</option><option value="Pistoia">Pistoia</option><option value="Pordenone">Pordenone</option><option value="Potenza">Potenza</option><option value="Prato">Prato</option><option value="Ragusa">Ragusa</option><option value="Ravenna">Ravenna</option><option value="Reggio Calabria">Reggio Calabria</option><option value="Reggio Emilia">Reggio Emilia</option><option value="Rieti">Rieti</option><option value="Rimini">Rimini</option><option value="Roma">Roma</option><option value="Rovigo">Rovigo</option><option value="Salerno">Salerno</option><option value="Sassari">Sassari</option><option value="Savona">Savona</option><option value="Siena">Siena</option><option value="Siracusa">Siracusa</option><option value="Sondrio">Sondrio</option><option value="Spezia">Spezia</option><option value="Taranto">Taranto</option><option value="Teramo">Teramo</option><option value="Terni">Terni</option><option value="Torino">Torino</option><option value="Trapani">Trapani</option><option value="Trento">Trento</option><option value="Treviso">Treviso</option><option value="Trieste">Trieste</option><option value="Udine">Udine</option><option value="Valle d'Aosta">Valle d'Aosta</option><option value="Varese">Varese</option><option value="Venezia">Venezia</option><option value="Verbano Cusio Ossola">Verbano Cusio Ossola</option><option value="Vercelli">Vercelli</option><option value="Verona">Verona</option><option value="Vibo Valentia">Vibo Valentia</option><option value="Vicenza">Vicenza</option><option value="Viterbo">Viterbo</option></select>
+<span id="people_location_prov_error" class="alert"></span></p>
+&nbsp;
+<p><label for="people_web">Sito web/blog personale:</label>
+<input type="text" name="people_web" id="people_web" value="" autocomplete="off" />
+<span id="people_web_error" class="alert"></span></p>
+
+<p><label for="people_facebook">Profilo/pagina Facebook:</label>
+<input type="text" name="people_facebook" id="people_facebook" value="" autocomplete="off" />
+<span id="people_facebook_error" class="alert"></span></p>
+
+<p><label for="people_facebook">Profilo Twitter:</label>
+<input type="text" name="people_twitter" id="people_twitter" value="" autocomplete="off" />
+<span id="people_twitter_error" class="alert"></span></p>
+
+<p><label for="people_gplus">Profilo/pagina Google+:</label>
+<input type="text" name="people_gplus" id="people_gplus" value="" autocomplete="off" />
+<span id="people_gplus_error" class="alert"></span></p>
+
+<p><label for="people_youtube">Canale Youtube:</label>
+<input type="text" name="people_youtube" id="people_youtube" value="" autocomplete="off" />
+<span id="people_youtube_error" class="alert"></span></p>
+
+<p><label for="people_instagram">Profilo Instagram:</label>
+<input type="text" name="people_instagram" id="people_instagram" value="" autocomplete="off" />
+<span id="people_instagram_error" class="alert"></span></p>
+
+<p><label for="people_skype">Account Skype:</label>
+<input type="text" name="people_skype" id="people_skype" value="" autocomplete="off" />
+<span id="people_skype_error" class="alert"></span></p>
+
+&nbsp;
+<p><input id="profile_save" type="button" data-icon="check" data-inline="true" value="Salva" /> <input id="profile_logout" type="button" data-icon="delete" data-inline="true" value="Disconnetti" /></p>
+
+</div>
+</div>
+
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		app.initialize();
+	</script>
+</body>
+</html>

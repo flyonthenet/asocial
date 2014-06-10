@@ -1,0 +1,121 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+	<title>Asocial</title>
+
+	<link rel="stylesheet" href="themes/asocial.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile.js"></script>
+	<script type="text/javascript" src="js/jquery.url.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+
+<body>
+<div id="people" data-role="page" data-theme="a">
+<div data-role="header" data-position="fixed" data-theme="c" data-position="fixed">
+<a href="index.html" data-rel="back" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-inline="true">Back</a>
+<h1 id="post_title"></h1>
+<a class="ui-btn-right" href="index.html" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+</div>
+
+<div data-role="content">
+<div class="intro">
+<p class="aligncenter" id="thumbnail"></p>
+<p class="aligncenter"><span><a class="white" id="people_web" target="_system"></a></span><span id="separator"> &middot; </span><span id="people_location_prov"></span></p>
+</div>
+&nbsp;
+<div><a id="load_excerpt" data-role="button" data-icon="forbidden" data-rel="popup" data-position-to="window" data-transition="pop" href="#post_excerpt_container">Why A-social?</a></div>
+<div class="ui-content" data-overlay-theme="a" data-theme="b" style="min-height: 200px" data-role="popup" data-close-btn="right" id="post_excerpt_container">
+<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+<div id="post_excerpt"></div>
+</div>
+
+<div><a id="load_content" data-role="button" data-icon="location" data-rel="popup" data-position-to="window" data-transition="pop" href="#post_content_container">My Life</a></div>
+<div class="ui-content" data-overlay-theme="a" data-theme="b" style="min-height: 200px" data-role="popup" data-close-btn="right" id="post_content_container">
+<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+<div id="post_content"></div>
+</div>
+&nbsp;
+<div id="social-networks">
+
+<div id="people_facebook" class="social-icon"><a class="unknown" data-rel="popup" data-position-to="window" data-transition="pop" href="#popup_facebook"><img src="img/social/128/facebook-icon.png" alt="Facebook" width="96" height="96" /></a></div>
+<div data-role="popup" data-close-btn="right" id="popup_facebook" class="ui-content" data-overlay-theme="a" data-theme="b" style="max-width:400px;">
+<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+<div class="has-profile">
+<p>Sono anche su Facebook! Chiedimi l'amicizia oppure mandami un messaggio</p>
+<a href="" target="_system" data-role="button" data-transition="flow">Visita profilo</a></div>
+<div class="no-profile"><p>Mi dispiace, non uso Facebook</p></div>
+</div>
+
+<div id="people_twitter" class="social-icon"><a class="unknown" data-rel="popup" data-position-to="window" data-transition="pop" href="#popup_twitter"><img src="img/social/128/twitter-icon.png" alt="Twitter" width="96" height="96" /></a></div>
+<div data-role="popup" data-close-btn="right" id="popup_twitter" class="ui-content" data-overlay-theme="a" data-theme="b" style="max-width:400px;">
+<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+<div class="has-profile">
+<p>Sono anche su Twitter! Seguimi oppure twittami</p>
+<a href="" target="_system" data-role="button" data-transition="flow">Visita profilo</a></div>
+<div class="no-profile"><p>Mi dispiace, non uso Twitter</p></div>
+</div>
+
+<div id="people_gplus" class="social-icon"><a class="unknown" data-rel="popup" data-position-to="window" data-transition="pop" href="#popup_gplus"><img src="img/social/128/gplus-icon.png" alt="Google+" width="96" height="96" /></a></div>
+<div data-role="popup" data-close-btn="right" id="popup_gplus" class="ui-content" data-overlay-theme="a" data-theme="b" style="max-width:400px;">
+<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+<div class="has-profile">
+<p>Sono anche su Google+! Aggiungimi alle tue cerchie</p>
+<a href="" target="_system" data-role="button" data-transition="flow">Visita profilo</a></div>
+<div class="no-profile"><p>Mi dispiace, non uso Google+</p></div>
+</div>
+
+<div id="people_youtube" class="social-icon"><a class="unknown" data-rel="popup" data-position-to="window" data-transition="pop" href="#popup_youtube"><img src="img/social/128/youtube-icon.png" alt="YouTube" width="96" height="96" /></a></div>
+<div data-role="popup" data-close-btn="right" id="popup_youtube" class="ui-content" data-overlay-theme="a" data-theme="b" style="max-width:400px;">
+<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+<div class="has-profile">
+<p>Sono anche su Youtube! Guarda tutti i miei video</p>
+<a href="" target="_system" data-role="button" data-transition="flow">Visita canale</a></div>
+<div class="no-profile"><p>Mi dispiace, non ho video su Youtube</p></div>
+</div>
+
+<div id="people_instagram" class="social-icon"><a class="unknown" data-rel="popup" data-position-to="window" data-transition="pop" href="#popup_instagram"><img src="img/social/128/instagram-icon.png" alt="Instagram" width="96" height="96" /></a></div>
+<div data-role="popup" data-close-btn="right" id="popup_instagram" class="ui-content" data-overlay-theme="a" data-theme="b" style="max-width:400px;">
+<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+<div class="has-profile"><p>Sono anche su Instagram! Guarda tutte le mie foto</p>
+<a href="" target="_system" data-role="button" data-transition="flow">Visita profilo</a></div>
+<div class="no-profile"><p>Mi dispiace, non ho foto su Instagram</p></div>
+</div>
+
+<div id="people_linkedin" class="social-icon"><a class="unknown" data-rel="popup" data-position-to="window" data-transition="pop" href="#popup_linkedin"><img src="img/social/128/linkedin-icon.png" alt="Linked In" width="96" height="96" /></a></div>
+<div data-role="popup" data-close-btn="right" id="popup_linkedin" class="ui-content" data-overlay-theme="a" data-theme="b" style="max-width:400px;">
+<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+<div class="has-profile">
+<p>Sono anche su Linked In! Leggi le mie competenze</p>
+<a href="" target="_system" data-role="button" data-transition="flow">Visita profilo</a></div>
+<div class="no-profile"><p>Mi dispiace, non uso Linked In</p></div>
+</div>
+
+<div id="people_skype" class="social-icon"><a class="unknown" data-rel="popup" data-position-to="window" data-transition="pop" href="#popup_skype"><img src="img/social/128/skype-icon.png" alt="Skype" width="96" height="96" /></a></div>
+<div data-role="popup" data-close-btn="right" id="popup_skype" class="ui-content" data-overlay-theme="a" data-theme="b" style="max-width:400px;">
+<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+<div class="has-profile">
+<p>Sono anche su Skype! Chiamami oppure chatta con me</p>
+<a href="" target="_system" data-role="button" data-transition="flow">Chiama</a></div>
+<div class="no-profile"><p>Mi dispiace, non uso Skype</p></div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		app.initialize();
+	</script>
+</body>
+</html>

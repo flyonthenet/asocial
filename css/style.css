@@ -1,0 +1,143 @@
+/*
+Theme Name: Apolitik
+Theme URI: http://www.apolitik.it
+Description: Apolitik
+Author: Borderline Media
+Author URI: http://www.borderlinemedia.it
+Version: 1.0
+*/
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.alignright {
+	display: block;
+	float: right;
+}
+
+.alignleft {
+	display: block;
+	float: left;
+}
+
+.ui-content .ui-controlgroup-horizontal {
+  display: table;
+  margin: 0 auto;
+}
+
+P {
+	margin: 0 0 5px 0;
+	padding: 0 0 0 0;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.attachment-mini {
+	float: left;
+} 
+
+.intro {
+	padding-bottom: 10px;
+}
+
+.intro IMG {
+	background-color: #FFFFFF;
+	padding: 3px;
+	border-radius: 3px;
+}
+
+.home {
+	padding-bottom: 10px;
+}
+
+.home IMG {
+	display: block;
+	margin: auto;
+}
+
+#picture {
+	border: 2px solid #FFFFFF;
+	border-radius: 2px;
+}
+
+.ui-li-icon {
+	background-color: rgba(0,0,0,.5);
+}
+
+.ui-icon-count.off {
+	background-color: #6c8;
+}
+
+.ui-icon-count.on {
+	background-color: #e74c3c;
+}
+ 
+#social-networks {
+	margin: auto;
+	text-align: center;
+}
+
+.social-icon {
+	display: inline-block;
+	position: relative;
+	margin: -3px;
+	padding: 0;
+}
+
+.social-icon A.has-profile:after {
+	bottom: 5px;
+	content: url('../img/si.png');
+	right: 5px;
+	position: absolute;
+}
+
+.social-icon A.no-profile:after {
+	bottom: 5px;
+	content: url('../img/no.png');
+	right: 5px;
+	position: absolute;
+}
+
+.social-icon A.unknown {
+	opacity: .2;
+}
+
+.em2 {
+	font-size: 2em;
+	padding: 1em 0;
+	text-align: justify; 
+}
+
+#login_confirm {
+	display: none;
+}
+
+.alert {
+	display: block;
+	background-image: url(images/alert.png);
+	background-position: center left;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+}
+
+.white {
+	color: #FFFFFF ! important;
+}
+
+.ios7 {
+	padding-top: 20px;
+}
+
+#thumbnail {
+	width: 100%;
+}
+
+#thumbnail IMG {
+	max-width: 100%;
+}

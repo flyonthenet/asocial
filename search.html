@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+	<title>Asocial</title>
+
+	<link rel="stylesheet" href="themes/asocial.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+	<!--link rel="stylesheet" type="text/css" href="css/apolitik.css" /-->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile.js"></script>
+	<script type="text/javascript" src="js/jquery.url.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+<div id="search" data-role="page" data-theme="a">
+<div data-role="header" data-position="inline" data-theme="c">
+<a href="index.html" data-rel="back" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-inline="true">Back</a>
+<h1>Asocial</h1>
+<a class="ui-btn-right" href="index.html" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+</div>
+<div data-role="content">
+<div data-role="collapsible-set">
+<ul id="search-list" data-role="listview" class="ui-corner-all ui-shadow" data-inset="true" data-filter="true" data-filter-placeholder="Cerca ...">
+</ul>
+</div>
+&nbsp;
+<div id="search-info" class="intro"><h2>Stai cercando qualcuno che non trovi nei social?</h2>
+<p>Non è detto che sia morto ... la persona che stai cercando magari preferirebbe incontrarti di persona: all'osteria sotto casa, al ristorante oppure allo stadio.</p>
+<p>Cerca il suo nome e scopri come rientrare in contatto.</p>
+&nbsp;
+<p><input id="login_check" type="button" data-icon="edit" data-inline="true" value="Modifica profilo" /></p>  
+</div>
+&nbsp;
+<div id="search-error" class="intro"><h2>Nessun risultato</h2>
+<p>Prova a cambiare le parole chiave della tua ricerca</p>  
+</div>
+</div>
+</div>
+
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		app.initialize();
+	</script>
+</body>
+</html>
