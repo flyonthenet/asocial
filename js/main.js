@@ -27,6 +27,8 @@ $( document ).on( 'pageshow', '#login', function(event) {
 	$("#login_submit").click( function(e) {
 		var err = new Array();
 		$('.alert').removeClass('error');
+		$('#username_error').html('');
+		$('#password_error').html('');
 		e.preventDefault( );
 		if( $("#login_confirm").is(":hidden") ) {
 			if( !$('#username').val() )
@@ -57,15 +59,8 @@ $( document ).on( 'pageshow', '#login', function(event) {
 						pwd: $('#password').val(),
 					}
 				}).fail( function ( response, status, error ) {
-					if( response.status == 404 ) {
-						$('#username_error').html('E-mail non trovata').slideDown( );
-					}
-					else if( response.status == 401 ) {
-						$('#password_error').html('Password errata').slideDown( );
-					}
-					else {
-						$('#username_error').html('Errore di autenticazione').slideDown( );
-					}
+					$('#username_error').html('E-mail o password errati').slideDown( );
+					$('#password_error').html('');
 					$.mobile.loading( 'hide' );
 				}).done( function ( response, status ) {
 					location.href = "profile.html";
@@ -214,8 +209,7 @@ $( document ).on( 'pageshow', '#profile', function(event) {
 			action: 'profile'
 		}
 	}).fail( function ( response, status, error ) {
-		
-		//location.href = "login.html";
+		location.href = "login.html";
 	}).done( function ( response, status ) {
 		for( i in response.meta ) {
 			if( response.meta[i][0] )
@@ -242,6 +236,7 @@ $( document ).on( 'pageshow', '#profile', function(event) {
 		$.ajax({
 			url: ajax_url,
 			crossDomain: true,
+			dataType: 'jsonp',
 			xhrFields: {
 				withCredentials: true
 			},
@@ -250,7 +245,7 @@ $( document ).on( 'pageshow', '#profile', function(event) {
 			$.mobile.loading( 'hide' );
 		}).done( function ( response, status ) {
 			$.mobile.loading( 'hide' );
-			history.back();
+			location.href = 'index.html';
 		});
 	});
 	$("#profile_logout").click( function(e) {
@@ -258,6 +253,7 @@ $( document ).on( 'pageshow', '#profile', function(event) {
 		$.ajax({
 			url: ajax_url,
 			crossDomain: true,
+			dataType: 'jsonp',
 			xhrFields: {
 				withCredentials: true
 			},
@@ -265,7 +261,7 @@ $( document ).on( 'pageshow', '#profile', function(event) {
 				action: 'logout'
 			}
 		}).fail( function ( response, status, error ) {
-			location.href = "index.html";
+			alert("LOGOUT FAIL");
 		}).done( function ( response, status ) {
 			location.href = "index.html";
 		});
