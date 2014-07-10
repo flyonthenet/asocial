@@ -224,6 +224,41 @@ $( document ).on( 'pageshow', '#profile', function(event) {
 		$("#post_excerpt").val( response.post_excerpt ).textinput('refresh');
 		$.mobile.loading( 'hide' );
 	});
+
+	$("#get-facebook-profile").click( function(e) {
+		$.mobile.loading( 'show' );
+		FB.login(function(response) {
+			if (response.authResponse) {
+				FB.api(
+					'/me',
+					function (response) {
+						if (response && !response.error) {
+							console.log(response);
+						}
+						$.mobile.loading( 'hide' );
+					}
+				);
+			}
+		});
+/*		$args = {
+			action: 'get-facebook-profile',
+		}
+		$.ajax({
+			url: ajax_url,
+			crossDomain: true,
+			dataType: 'jsonp',
+			xhrFields: {
+				withCredentials: true
+			},
+			data: $args
+		}).fail( function ( response, status, error ) {
+			$.mobile.loading( 'hide' );
+		}).done( function ( response, status ) {
+			$.mobile.loading( 'hide' );
+			alert( response );
+		});*/
+	});
+
 	$("#profile_save").click( function(e) {
 		e.preventDefault( );
 		$.mobile.loading( 'show' );

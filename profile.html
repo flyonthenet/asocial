@@ -17,6 +17,24 @@
 
 
 <body>
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '863828643647327',
+			xfbml      : true,
+			version    : 'v2.0'
+		});
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/it_IT/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+
 <div id="profile" data-role="page" data-theme="a">
 <div data-role="header" data-theme="c" data-position="fixed">
 <a href="index.html" data-rel="back" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-inline="true">Back</a>
@@ -64,6 +82,7 @@
 <span id="people_web_error" class="alert"></span></p>
 
 <p><label for="people_facebook">Profilo/pagina Facebook:</label>
+<button id="get-facebook-profile" data-role="button" data-inline="true">Ricava automaticamente</button>
 <input type="text" name="people_facebook" id="people_facebook" value="" autocomplete="off" />
 <span id="people_facebook_error" class="alert"></span></p>
 
