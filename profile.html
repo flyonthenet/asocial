@@ -17,23 +17,6 @@
 
 
 <body>
-<script>
-	window.fbAsyncInit = function() {
-		FB.init({
-			appId      : '863828643647327',
-			xfbml      : true,
-			version    : 'v2.0'
-		});
-	};
-
-	(function(d, s, id){
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) {return;}
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/it_IT/sdk.js";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-</script>
 
 <div id="profile" data-role="page" data-theme="a">
 <div data-role="header" data-theme="c" data-position="fixed">
@@ -82,9 +65,20 @@
 <span id="people_web_error" class="alert"></span></p>
 
 <p><label for="people_facebook">Profilo/pagina Facebook:</label>
-<button id="get-facebook-profile" data-role="button" data-inline="true">Ricava automaticamente</button>
+<div data-role="controlgroup" data-type="horizontal">
+<button id="get-facebook-profile" data-role="button">Ricava autom.</button>
+<button id="edit-facebook-profile" data-role="button">Modifica</button>
+</div>
+
+<div id="facebook-profile-editor" style="display: none">
 <input type="text" name="people_facebook" id="people_facebook" value="" autocomplete="off" />
 <span id="people_facebook_error" class="alert"></span></p>
+</div>
+
+<div data-role="popup" id="facebook-auth-popup" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content">
+<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+<iframe src="" width="497" height="298" seamless></iframe>
+</div>
 
 <p><label for="people_facebook">Profilo Twitter:</label>
 <input type="text" name="people_twitter" id="people_twitter" value="" autocomplete="off" />

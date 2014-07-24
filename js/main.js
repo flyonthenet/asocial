@@ -7,8 +7,14 @@ $(document).bind("mobileinit", function(){
 });
 
 $( document ).on( 'pageshow', '#home', function(event) {
-	
 });
+
+$(document).ready( function() {
+	if(navigator.userAgent.match(/iPhone OS 7/)) {
+		$('.ui-header').css('margin-top', '10px').before('<div style="position: fixed; top: 0; height: 20px; width: 100%; background-color: #000000">&nbsp;</div>');
+	}
+});
+
 
 $( document ).on( 'pageshow', '#about', function(event) {
 	$.ajax({
@@ -225,22 +231,15 @@ $( document ).on( 'pageshow', '#profile', function(event) {
 		$.mobile.loading( 'hide' );
 	});
 
+	$("#edit-facebook-profile").click( function(e) {
+		if( $('#facebook-profile-editor').is(':visible') )
+			$('#facebook-profile-editor').slideUp('fast');
+		else $('#facebook-profile-editor').slideDown('fast');
+	});
+
 	$("#get-facebook-profile").click( function(e) {
 		$.mobile.loading( 'show' );
-		FB.login(function(response) {
-			if (response.authResponse) {
-				FB.api(
-					'/me',
-					function (response) {
-						if (response && !response.error) {
-							console.log(response);
-						}
-						$.mobile.loading( 'hide' );
-					}
-				);
-			}
-		});
-/*		$args = {
+		$args = {
 			action: 'get-facebook-profile',
 		}
 		$.ajax({
@@ -255,8 +254,8 @@ $( document ).on( 'pageshow', '#profile', function(event) {
 			$.mobile.loading( 'hide' );
 		}).done( function ( response, status ) {
 			$.mobile.loading( 'hide' );
-			alert( response );
-		});*/
+			window.open( response.url, '_system' );
+		});
 	});
 
 	$("#profile_save").click( function(e) {
@@ -331,6 +330,9 @@ $( document ).on( 'pageshow', '#profile-picture', function(event) {
 });
 
 $( document ).on( 'pageshow', '#people', function(event) {
+	if(navigator.userAgent.match(/iPhone OS 7/)) {
+		$('.ui-header').css('margin-top', '10px').before('<div style="position: fixed; top: 0; height: 20px; width: 100%; background-color: #000000">&nbsp;</div>');
+	}
 	$.mobile.loading( 'show' );
 	$('A[target="_system"]').click( function(e) {
 		e.preventDefault( );
@@ -420,4 +422,9 @@ function uploadPhoto(imageData) {
 	}).always( function() {
 		$.mobile.loading( 'hide' );
 	});
+}
+
+function facebook_callback(obj) {
+	alert('CIAO');
+	console.log(obj);
 }
